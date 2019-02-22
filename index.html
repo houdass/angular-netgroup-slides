@@ -530,35 +530,106 @@
             </p>
         </section>
 
+        <!-- II- 10. *ngIf & *ngFor & ngSwitch -->
         <section>
-            <h2>*ngIf / else condition</h2>
-            <ul>
-                <li>
-                    <pre><code><p *ngIf="isVisible; else noCondition">This is true</p></code></pre>
-                </li>
-                <li>
-                    <pre><code>
-                        <ng-template #noCondition><p>This is false
-                            <p></ng-template>
+            <section><h2>II- 10. *ngIf & *ngFor & ngSwitch</h2></section>
+            <section>
+                <h2>*ngIf / else condition</h2>
+                <img src="assets/angular/ngif.png">
+            </section>
+            <section>
+                <h2>*ngFor / index</h2>
+                <p>
+                <pre><code><div *ngFor="let item of items; let i = index">{{i}} - {{item.name}}</div>
                     </code></pre>
-                </li>
-            </ul>
+                Ou,
+                <pre><code><p *ngFor="let item of items; index as i">{{i}} - {{item.name}}</p>
+                    </code></pre>
+                </p>
+            </section>
+            <section>
+                <h2>ngSwitch</h2>
+                <img src="assets/angular/ngswitch.png">
+            </section>
         </section>
+
+        <!-- II- 11. ngClass & ngStyle -->
         <section>
-            <h2>*ngFor / index</h2>
-            <ul>
-                <li>
-                    <pre><code><p *ngFor="let item of items; let i = index">{{i}} - {{item.name}}</p>
-                    </code></pre>
-                </li>
-                <li>Or,
-                    <pre><code><p *ngFor="let item of items; index as i">{{i}} - {{item.name}}</p>
-                    </code></pre>
-                </li>
-            </ul>
+            <section><h2>II- 11. ngClass & ngStyle</h2></section>
+            <section>
+                <h2>ngClass</h2>
+                <img src="assets/angular/ngclass.png">
+            </section>
+            <section>
+                <h2>ngStyle</h2>
+                <p>
+                    <code>
+                        <pre><span [ngStyle]="{'background-color':'green'}"></span></pre>
+                    </code>
+                </p>
+                <p>
+                    <code><pre><span [ngStyle]="{'background-color':person.country === 'UK' ? 'green' : 'red' }"></span>
+                    </pre>
+                    </code>
+                </p>
+            </section>
         </section>
+
+        <!-- II- 12. debugging -->
         <section>
-            <h2>Encapsulation</h2>
+            <section>
+                <h2>II- 12. Debugging</h2>
+                <p><a href="https://augury.rangle.io/">https://augury.rangle.io/</a></p>
+            </section>
+        </section>
+
+        <!-- III- Components -->
+        <section>
+            <section>
+                <h2>III- Components</h2>
+            </section>
+        </section>
+
+        <!-- III- 1. template/templateUrl -->
+        <section>
+            <section>
+                <h2>III- 1. template/templateUrl</h2>
+            </section>
+        </section>
+
+        <!-- III- 2. selector -->
+        <section>
+            <section>
+                <h2>III- 2. selector</h2>
+            </section>
+        </section>
+
+        <!-- III- 3. styles/styleUrls -->
+        <section>
+            <section>
+                <h2>III- 3. styles/styleUrls</h2>
+            </section>
+        </section>
+
+        <!-- III- 4. @Input -->
+        <section>
+            <section>
+                <h2>III- 4. @Input</h2>
+            </section>
+        </section>
+
+        <!-- III- 5. @Output -->
+        <section>
+            <section>
+                <h2>III- 5. @Output</h2>
+                <p>Quand @Input se charge de recevoir une valeur, @Output se charge, lui, d'envoyer une donnée.</p>
+                <img src="assets/angular/7.png" width="400" style="background: none; border:none; box-shadow:none;"/>
+            </section>
+        </section>
+
+        <!-- III- 6. @Encapsulation -->
+        <section>
+            <h2>III- 6. @Encapsulation</h2>
             <ul>
                 <li>
                     <span style="color: #6cc644;">encapsulation: ViewEncapsulation.Emulated</span> Pas de shadow DOM,
@@ -575,31 +646,33 @@
                 </li>
             </ul>
         </section>
-        <section>
-            <h2>Input/Output</h2>
-            <ul>
-                <li>
-                    <span style="color: #6cc644;">@Input</span>
-                </li>
-                <li>
-                    <span style="color: #6cc644;">@Output</span>
-                </li>
-                <li>
-                    Quand @Input se charge de recevoir une valeur, @Output se charge, lui, d'envoyer une donnée.
-                </li>
-            </ul>
-            <img src="assets/angular/7.png" width="400" style="background: none; border:none; box-shadow:none;"/>
-        </section>
 
+        <!-- III- 7. Template reference variables -->
         <section>
-            <h2>Template reference variables</h2>
+            <h2>III- 7. Template reference variables</h2>
             <p>Les variables référence de template (ou template reference variables) permettent d’accéder à un élément
                 DOM ou un composant Angular via une variable déclarée directement sur la balise de cet élément ou de ce
                 composant avec la syntaxe #var ou ref-var.</p>
         </section>
+
+        <!-- III- 8. @ViewChild -->
+        <section>
+            <h2>III- 8. @ViewChild </h2>
+            <p>Vous pouvez utiliser ViewChild pour obtenir le premier élément ou la directive correspondant au sélecteur
+                de la vue DOM.</p>
+        </section>
+
+        <!-- III- 9. @ContentChild -->
+        <section>
+            <h2>III- 9. @ContentChild </h2>
+            <p>Vous pouvez utiliser ContentChild pour obtenir le premier élément ou la directive correspondant au
+                sélecteur du DOM de contenu.</p>
+        </section>
+
+        <!-- III- 10. Cycle de vie d'un composant (Hooks) -->
         <section>
             <section>
-                <h2>Hooks (Le cycle de vie d’un Component)</h2>
+                <h2>III- 10. Cycle de vie d'un composant (Hooks)</h2>
                 <p>Pour ceux qui ne connaissent pas le terme de cycle de vie, il s'agit simplement de la définition de
                     toutes les étapes de la naissance du Component à sa mort.</p>
                 <img src="assets/angular/8.png" width="300" style="background: none; border:none; box-shadow:none;"/>
@@ -661,101 +734,143 @@
                     Il est appelé qu'une seule fois avant la destruction du Component / directive.</p>
             </section>
         </section>
+
+        <!-- IV- Directives -->
         <section>
             <section>
-                <h3>Directives</h3>
-                <p>
-                    Les Components sont des directives à la seule différence qu'ils possèdent une fonctionnalité de
-                    templating. En TypeScript, une directive est une classe à laquelle on applique le décorateur <span
-                        style="color: #6cc644;">@Directive</span>.
-                </p>
+                <h3>IV- Directives</h3>
             </section>
             <section>
                 <p>Il existe deux sortes de directives:</p>
-                <p>Les directives structurelles: Elles ont pour but de modifier le DOM en ajoutant, enlevant ou
-                    replaçant un élément du DOM.
-                    Les attribute directives: Elles ont pour but de modifier l'apparence ou le comportement d'un
-                    élément.</p>
-
-            </section>
-            <section>
-                <h3>ElementRef</h3>
-                <p>
-                    <ul>
-                        <li>
-                <p appBasicHighlight>App Basic Highlight Example</p></li>
-                <li>
-                    <pre>constructor(private elementRef: ElementRef) {}</pre>
-                </li>
-                <li>
-                    <pre>ngOnInit() { this.elementRef.nativeElement.style.backgroundColor = 'green'; }</pre>
-                </li>
-                </ul>
-                </p>
-            </section>
-            <section>
-                <h3>Renderer</h3>
                 <ul>
-                    <li>
-                        <pre>constructor(private elRef: ElementRef, private renderer: Renderer2) {}</pre>
+                    <li>Les directives structurelles: Elles ont pour but de modifier le DOM en ajoutant, enlevant ou
+                        replaçant un élément du DOM.
                     </li>
                     <li>
-                        <pre>ngOnInit() { this.renderer.setStyle(this.elRef.nativeElement, 'backgroundColor', 'blue'); }</pre>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <h3>@HostBinding</h3>
-                <ul>
-                    <li>
-                        <pre>@HostBinding('style.backgroundColor') backgroundColor;</pre>
-                    </li>
-                    <li>
-                        <pre>ngOnInit() { this.backgroundColor = 'blue'; }</pre>
-                    </li>
-                </ul>
-                </ul>
-            </section>
-            <section>
-                <h3>@HostListener</h3>
-                <pre>@HostListener('mouseenter') mouseenter(eventData: Event) { this.backgroundColor = this.highlightColor; }</pre>
-            </section>
-            <section>
-                <h3>@Input</h3>
-                <ul>
-                    <li>@Input() highlightColor = 'transparent';</li>
-                    <li>
-                        <pre><code><p appBetterHighlight [highlightColor]="'blue'">Highlight
-                            Directive</p></code></pre>
-                    </li>
-                    <li>ou bien,
-                        <pre><code><p appBetterHighlight highlightColor="blue">Highlight Directive</p>
-                        </code></pre>
+                        Les attribute directives: Elles ont pour but de modifier l'apparence ou le comportement d'un
+                        élément.
                     </li>
                 </ul>
             </section>
         </section>
+
+
+        <!-- IV- 1. Les directives structurelles -->
+        <section>
+            <h3>IV- 1. Les directives structurelles</h3>
+            <ul>
+                <li>*ngIf</li>
+                <li>*ngFor</li>
+            </ul>
+        </section>
+
+        <!-- IV- 2. Les directives directives -->
+        <section>
+            <h3>IV- 2. Les directives directives</h3>
+            <ul>
+                <li>NgClass</li>
+                <li>NgStyle</li>
+            </ul>
+        </section>
+
+        <!-- IV- 3. ElementRef -->
+        <section>
+            <h3>IV- 3. ElementRef</h3>
+            <p>
+                <code>
+                    <pre>constructor(private elementRef: ElementRef) {}</pre>
+                </code>
+            </p>
+            <p>
+                <code>
+                    <pre>ngOnInit() { this.elementRef.nativeElement.style.backgroundColor = 'green'; }</pre>
+                </code>
+            </p>
+        </section>
+
+        <!-- IV- 4. Renderer -->
+        <section>
+            <h3>IV- 4. Renderer</h3>
+            <p>
+                <code>
+                    <pre>constructor(private elRef: ElementRef, private renderer: Renderer2) {}</pre>
+                </code>
+            </p>
+            <p>
+                <code>
+                    <pre>ngOnInit() { this.renderer.setStyle(this.elRef.nativeElement, 'backgroundColor', 'blue'); }</pre>
+                </code>
+            </p>
+        </section>
+
+        <!-- IV- 5. @HostBinding -->
+        <section>
+            <h3>IV- 5. @HostBinding</h3>
+            <p><code>
+                <pre>@HostBinding('style.backgroundColor') backgroundColor;</pre>
+            </code>
+            </p>
+            <p>
+                <code>
+                    <pre>ngOnInit() { this.backgroundColor = 'blue'; }</pre>
+                </code>
+            </p>
+        </section>
+
+        <!-- IV- 6. @HostListener -->
+        <section>
+            <h3>IV- 6. @HostListener</h3>
+            <p><code>
+                <pre>@HostListener('mouseenter') mouseenter(eventData: Event) { this.backgroundColor = this.highlightColor; }</pre>
+            </code></p>
+        </section>
+
+        <!-- IV- 7. @Input -->
+        <section>
+            <h3>IV- 7. @Input</h3>
+            <div>
+                <pre><code>@Input() highlightColor = 'transparent';</code></pre>
+            </div>
+            <div>Côté HTML: <pre><code>
+            <p appBetterHighlight [highlightColor]="'blue'">Highlight
+                Directive</p></code></pre></div>
+            <div>ou bien,
+                <pre><code><p appBetterHighlight highlightColor="blue">Highlight Directive</p>
+                        </code></pre></div>
+        </section>
+
+        <!-- V- Services & Injection des dépendances -->
         <section>
             <section>
-                <h2>Services</h2>
+                <h2>V- Services & Injection des dépendances</h2>
                 <p>
                     "Components shouldn't fetch or save data directly and they certainly shouldn't knowingly present
                     fake data. They should focus on presenting data and delegate data access to a service."
                 </p>
             </section>
-            <section>
-                <h3>@Injectable</h3>
-                <p>@Injectable() lets Angular know that a class can be used with the dependency injector.</p>
-            </section>
-            <section>
-                <h3>Providers</h3>
-            </section>
-            <section>
-                <h3>@Inject</h3>
-                <p>@Inject() is a manual mechanism for letting Angular know that a parameter must be injected.</p>
-            </section>
         </section>
 
+        <!-- V- 1. @Injectable -->
+        <section>
+            <h3>V- 1. @Injectable </h3>
+            <p>@Injectable() lets Angular know that a class can be used with the dependency injector.</p>
+        </section>
+
+        <!-- V- 2. Providers -->
+        <section>
+            <h3>V- 2. Providers</h3>
+        </section>
+
+        <!-- V- 3. @Inject -->
+        <section>
+            <h3>V- 3. @Inject</h3>
+            <p>@Inject() is a manual mechanism for letting Angular know that a parameter must be injected.</p>
+        </section>
+
+        <!-- V- 4. providedIn -->
+        <section>
+            <h3>V- 4. providedIn</h3>
+        </section>
 
         <section>
             <section>
@@ -777,7 +892,8 @@
             </section>
             <section>
                 <h3>npm i -S @ngrx/store-devtools</h3>
-                <p>@ngrx/store-devtools instruments your store letting you use a powerful time-travelling debugger.</p>
+                <p>@ngrx/store-devtools instruments your store letting you use a powerful time-travelling
+                    debugger.</p>
             </section>
             <section>
                 <h3>npm i -S @ngrx/entity</h3>
@@ -799,7 +915,8 @@
                 <h3>Reducers</h3>
                 <p>Pure functions called reducers take the previous state and the next action to compute the new
                     state.</p>
-                <p>Reducers specify how the application's state changes in response to actions sent to the store.</p>
+                <p>Reducers specify how the application's state changes in response to actions sent to the
+                    store.</p>
                 <p>Remember that actions only describe what happened, but don't describe how the application's state
                     changes.</p>
             </section>
