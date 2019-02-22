@@ -1,0 +1,770 @@
+<!doctype html>
+<!--suppress CheckImageSize -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Présentation Angular</title>
+
+    <meta name="description" content="Exploring the GitHub Service Universe">
+    <meta name="author" content="Bjoern Kimminich">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <img src="assets/angular/angular.png" class="heart" width="200"
+                 style="background: none; border:none; box-shadow:none;"/>
+
+            <h1>Angular</h1>
+            <p>
+                <small>Présenté par: <a href="http://houdass.com">Youness Houdass</a></small>
+            </p>
+            <p>
+                <small>Email: Houd.youness@gmail.com</small>
+            </p>
+            <p>
+                <a href="http://angular.io/">http://angular.io/</a>
+            </p>
+        </section>
+
+        <!-- I- Introduction -->
+        <section>
+            <section>
+                <h2>I- Introduction</h2>
+            </section>
+        </section>
+
+        <!-- I- 1. Présentation d'angular -->
+        <section>
+            <section>
+                <h2>I- 1. Qu'est ce que angular?</h2>
+                <img src="assets/angular/jimcarrey.gif" width="500"/>
+            </section>
+            <section>
+                <p>Angular est une plateforme de développement qui permet de créer des applications clientes web, il est
+                    aussi utilisé pour la création d’application mobile, notamment avec Ionic.</p>
+            </section>
+            <section>
+                <p>Angular permet de créer des applications SPA (single page application).</p>
+            </section>
+        </section>
+
+        <!-- I- 2. AngularJS vs. Angular2+ -->
+        <section>
+            <section>
+                <h2>I- 2. AngularJS vs. Angular2+</h2>
+                <img src="assets/angular/angularvsangularjs.gif" width="500"/>
+            </section>
+            <section>
+                <p>Le terme AngularJS désigne la version 1.x.x du framework, et les versions supérieures ou égale à 2
+                    sont nommées simplement Angular.</p>
+            </section>
+            <section>
+                <p>Si vous connaissez AngularJS (Angular 1.x), vous pensez peut-être qu’Angular est une upgrade
+                    d’AngularJS. En réalité, Angular a été totalement réécrit par Google, ce qui en fait un nouveau
+                    framework à part entière, avec une philosophie et des concepts propres à lui.</p>
+                <img src="assets/angular/1.gif" width="500"/>
+            </section>
+            <section>
+                <h4>
+                    Au travers d’Angular, Google cherche à faire table rase du passé, en remettant à plat de nombreux
+                    concepts présents dans AngularJS.
+                </h4>
+                <p>
+                    Cette stratégie a été motivée par 4 principes fondateurs :
+                <ul>
+                    <li>Augmenter les performances</li>
+                    <li>Améliorer la productivité</li>
+                    <li>S’adapter au mobile</li>
+                    <li>Embrasser les nouveaux standards du Web</li>
+                </ul>
+                </p>
+            </section>
+            <section>
+                <h3>Avantages</h3>
+                <ul>
+                    <li>Des performances améliorées</li>
+                    <li>Une modularité accrue / du code plus expressif</li>
+                    <li>Un respect des nouveaux standards du web</li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- I- 3. Historique des versions Angular N -->
+        <section>
+            <section>
+                <h2>I- 3. Historique des versions Angular N</h2>
+            </section>
+            <section>
+                <h3>Un peu d'histoire</h3>
+                <ul>
+                    <li>Angular 2: September 2016</li>
+                    <li>Angular 4: Mars 2017 (Pas de version 3, car toutes les bibliothèques Angular de base étaient
+                        toutes à la version v2.3.0, sauf le paquet @angular/router qui était à la v3.3.0)
+                    </li>
+                    <li>Angular 5: November 2017</li>
+                    <li>Angular 6: Mai 2018</li>
+                    <li>Angular 7: Octobre 2018</li>
+                    <li>Angular 8: Prochainement (Mars/Avril)</li>
+                </ul>
+                <img src="assets/angular/2.png" width="400"/>
+            </section>
+            <section>
+                <h3>Nouveautés Angular 4</h3>
+                <ul>
+                    <li>Disponible depuis Mars 2017</li>
+                    <li>*ngIf et ng-template</li>
+                    <li>*ngIf et asynchronisme</li>
+                    <li>Renderer2</li>
+                    <li>Directive email</li>
+                    <li>Les animations</li>
+                    <li>Titlecase</li>
+                    <li>Http deprecated => HttpClient</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Nouveautés Angular 5</h3>
+                <ul>
+                    <li>Disponible depuis Novembre 2017</li>
+                    <li>Angular 4 recompile tous les fichiers à chaque changement, ce qui le rend trop lent en phase de
+                        développement
+                    </li>
+                    <li>Angular 5 introduit une option watch, il compile que les fichiers nécessaire, ce qui le rend
+                        ultra rapide
+                    </li>
+                    <li>Le temps de compilation est passé de 12-14 secondes à 2-3 secondes sur un projet de moyenne
+                        taille
+                    </li>
+                    <li>Les pipes i18n: number, percent, currency, date</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Nouveautés Angular 6</h3>
+                <ul>
+                    <li>Component Dev Kit (CDK): ensemble complet de composants accessibles, performants et riches en
+                        fonctionnalités
+                    </li>
+                    <li>Angular Elements</li>
+                    <li>Nouveau moteur de rendu "Ivy":
+                        <small>moteur de rendu qui réduira la taille des applications, accélèrera le temps de
+                            compilation et sera plus facile à débugger. C’est en tous cas la promesse de l’équipe
+                            Angular, qui assure par ailleurs que la transition vers ce nouveau moteur de rendu se fera
+                            tout en douceur
+                        </small>
+                    </li>
+                    <li>Schematics et ng update</li>
+                    <li>Bazel:
+                        <small>un outil de build</small>
+                    </li>
+                    <li>Service Workers et Progressive Web Apps</li>
+                    <li>Tree-shakable providers:
+                        <small>Au lieu de déclarer un service dans un module particulier pour ensuite l’importer, il est
+                            désormais possible de le faire dans le service lui-même
+                        </small>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- I- 4. Setup projet -->
+        <section>
+            <section>
+                <h2>I- 4. Setup projet</h2>
+            </section>
+            <section>
+                <p>
+                    "The CLI is a geart tool for big and very big Angular projects! It allows to focus on Angular code
+                    instead of workflow tasks."
+                </p>
+            </section>
+        </section>
+
+        <!-- I- 5. Angular CLI -->
+        <section>
+            <section>
+                <h2>I- 5. Angular CLI</h2>
+            </section>
+            <section>
+                <img src="assets/angular/6.svg" width="400" style="background: none; border:none; box-shadow:none;"/>
+                <p>
+                    "The CLI is a geart tool for big and very big Angular projects! It allows to focus on Angular code
+                    instead of workflow tasks."
+                </p>
+                <p>
+                    Google nous propose un outil clé en main pour réaliser les tâches de développement les plus
+                    courantes. Ce projet est basé sur le projet Open Source ember CLI, qui a maintenant plus de trois
+                    ans. Grâce à notre Angular Cli, il est possible de :
+                <ul>
+                    <li>Créer une application from scratch via un scaffolding</li>
+                    <li>Générer des component|directive|pipe|service|class|guard|interface|enum|module</li>
+                    <li>Builder un projet</li>
+                    <li>Lancer des tests de End-to-End (E2E) ou unitaires</li>
+                    <li>Et beaucoup d'autres choses…</li>
+                </ul>
+                </p>
+            </section>
+            <section>
+                <p>
+                <ul>
+                    <li>npm i -g @angular/cli</li>
+                    <li>ng new angular-netgroup-demo</li>
+                    <li>ng new angular-netgroup-demo --style=less|scss</li>
+                    <li>cd angular-netgroup-demo</li>
+                    <li>ng serve</li>
+                </ul>
+                </p>
+            </section>
+        </section>
+
+
+
+
+        <section>
+            <h2>4. Ajouter bootstrap au projet</h2>
+            <p>
+            <ul>
+                <li>npm i -S bootstrap@3.3.7</li>
+                <li>Ouvrir le fichier .angular-cli.json</li>
+                <li>Au niveau du noeud <strong>styles</strong> ajouter : <span style="color: #6cc644;">../node_modules/bootstrap/dist/css/bootstrap.min.css</span>
+                </li>
+            </ul>
+            </p>
+        </section>
+
+        <section>
+            <section>
+                <h2>5. Les selectors (composants)</h2>
+            </section>
+
+            <section>
+                <p>
+                <ul>
+                    <li>
+                        selector: 'app-users'
+                        <xmp style="color: #6cc644;">
+                            <app-users></app-users>
+                        </xmp>
+                    </li>
+                    <li>
+                        selector: '.app-users'
+                        <xmp style="color: #6cc644;">
+                            <div class="app-users"></div>
+                        </xmp>
+                    </li>
+                    <li>
+                        selector: '[app-users]'
+                        <xmp style="color: #6cc644;">
+                            <div app-users></div>
+                        </xmp>
+                    </li>
+                </ul>
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>6. Databinding</h2>
+                <img src="assets/angular/3.gif" width="400" style="background: none; border:none; box-shadow:none;"/>
+            </section>
+            <section>
+                <p>
+                <ul>
+                    <li>
+                        <span style="color: #6cc644;">String interpolation</span> {{ data }}
+                    </li>
+                    <li>
+                        <span style="color: #6cc644;">Property binding</span> [property]="data" or bind-property="data",
+                        par exemple:
+                        <xmp>
+                            <button [disabled]="isDisabled"> ...</button>
+                        </xmp>
+                    </li>
+                    <li>
+                        <span style="color: #6cc644;">Event Binding </span> (event)="callback()" or
+                        on-click="callback()", par exemple:
+                        <xmp>
+                            <button (click)="onClick()"></button>
+                        </xmp>
+                    </li>
+                    <li>
+                        <span style="color: #6cc644;">Two-way binding </span> (Banana in the box) [(data)]
+                    </li>
+                </ul>
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <h2>*ngIf / else condition</h2>
+            <ul>
+                <li>
+                    <xmp style="color: #6cc644;"><p *ngIf="isVisible; else noCondition">This is true</p></xmp>
+                </li>
+                <li>
+                    <xmp style="color: #6cc644;">
+                        <ng-template #noCondition><p>This is false
+                            <p></ng-template>
+                    </xmp>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>*ngFor / index</h2>
+            <ul>
+                <li>
+                    <xmp style="color: #6cc644;"><p *ngFor="let item of items; let i = index">{{i}} - {{item.name}}</p>
+                    </xmp>
+                </li>
+                <li>Or,
+                    <xmp style="color: #6cc644;"><p *ngFor="let item of items; index as i">{{i}} - {{item.name}}</p>
+                    </xmp>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Encapsulation</h2>
+            <ul>
+                <li>
+                    <span style="color: #6cc644;">encapsulation: ViewEncapsulation.Emulated</span> Pas de shadow DOM,
+                    mais une émulation du Shadow DOM. C'est le comportement par défaut.
+                </li>
+                <li>
+                    <span style="color: #6cc644;">encapsulation: ViewEncapsulation.Native </span> Utilisation du
+                    véritable shadow DOM. Superbe sur Chrome, mais cela s'arrête là pour le moment. Ni Safari, ni
+                    Firefox ne supporte ce mécanisme.
+                </li>
+                <li>
+                    <span style="color: #6cc644;">encapsulation: ViewEncapsulation.None </span> Ni shadow DOM, ni aucun
+                    mécanisme d'encapsulation de style CSS.
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Input/Output</h2>
+            <ul>
+                <li>
+                    <span style="color: #6cc644;">@Input</span>
+                </li>
+                <li>
+                    <span style="color: #6cc644;">@Output</span>
+                </li>
+                <li>
+                    Quand @Input se charge de recevoir une valeur, @Output se charge, lui, d'envoyer une donnée.
+                </li>
+            </ul>
+            <img src="assets/angular/7.png" width="400" style="background: none; border:none; box-shadow:none;"/>
+        </section>
+
+        <section>
+            <h2>Template reference variables</h2>
+            <p>Les variables référence de template (ou template reference variables) permettent d’accéder à un élément
+                DOM ou un composant Angular via une variable déclarée directement sur la balise de cet élément ou de ce
+                composant avec la syntaxe #var ou ref-var.</p>
+        </section>
+        <section>
+            <section>
+                <h2>Hooks (Le cycle de vie d’un Component)</h2>
+                <p>Pour ceux qui ne connaissent pas le terme de cycle de vie, il s'agit simplement de la définition de
+                    toutes les étapes de la naissance du Component à sa mort.</p>
+                <img src="assets/angular/8.png" width="300" style="background: none; border:none; box-shadow:none;"/>
+            </section>
+            <section>
+                <h3>ngOnChanges</h3>
+                <p>
+                    Se lance lorsqu'Angular modifie une des propriétés du Component / directive suite à un Property
+                    Binding <span style="color: #6cc644;">@Input</span>. La méthode reçoit un object SimpleChanges
+                    contenant les valeurs courantes et précédentes.
+
+                    Il est lancé avant <span style="color: #6cc644;">ngOnInit</span> et à chaque fois qu'une ou
+                    plusieurs propriétés précédées de <span style="color: #6cc644;">@Input</span> change.
+                </p>
+            </section>
+            <section>
+                <h3>ngOnInit</h3>
+                <p>Initialise le component / directive après qu'Angular ait valorisé les Property Binding <span
+                        style="color: #6cc644;">@Input</span>. Il n'est lancé qu'une seule fois après le premier .
+                </p>
+            </section>
+            <section>
+                <h3>ngDoCheck</h3>
+                <p>Détecte et agit sur les changements qu'Angular ne peut ou ne pourra pas détecter lui même. Il permet,
+                    en outre, de vérifier les changements dans les directives additionnelement aux algorithmes
+                    classiques. Il est appelé immédiatement après <span style="color: #6cc644;">ngOnChanges</span> et
+                    <span style="color: #6cc644;">ngOnInit</span>.</p>
+            </section>
+            <section>
+                <h3>ngAfterContentInit</h3>
+                <p>Il se lance également après l'initialisation d'un Content (ng-content). A partir de ce moment, les
+                    propriétés initialisées par <span style="color: #6cc644;">@ContentChild</span> et <span
+                            style="color: #6cc644;">@ContentChildren</span> sont valorisées.
+
+                    Il n' est appelé qu'une fois après le premier <span style="color: #6cc644;">ngDoCheck</span>. </p>
+            </section>
+            <section>
+                <h3>ngAfterContentChecked</h3>
+                <p>Se lance après le check du Content.</p>
+            </section>
+            <section>
+                <h3>ngAfterViewInit</h3>
+                <p>Se lance après qu'Angular initialise la vue (template) du Component et les vues enfants. A partir de
+                    ce moment, les propriétés initialisées <span style="color: #6cc644;">@ViewChild</span> et <span
+                            style="color: #6cc644;">@ViewChildren</span> sont valorisées
+
+                    Il n'est appelé qu'une seule fois après <span style="color: #6cc644;">ngAfterContentChecked</span>.
+                </p>
+            </section>
+            <section>
+                <h3>ngAfterViewChecked</h3>
+                <p>Se lance après le check de la vue (template)</p>
+            </section>
+            <section>
+                <h3>ngOnDestroy</h3>
+                <p>Se lance juste avant qu'Angular ne détruise le Component / directive. C'est l'endroit idéal pour
+                    desinscrire les Observables et détacher les évènements afin d'éviter les fuites mémoires.
+
+                    Il est appelé qu'une seule fois avant la destruction du Component / directive.</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>Directives</h3>
+                <p>
+                    Les Components sont des directives à la seule différence qu'ils possèdent une fonctionnalité de
+                    templating. En TypeScript, une directive est une classe à laquelle on applique le décorateur <span
+                        style="color: #6cc644;">@Directive</span>.
+                </p>
+            </section>
+            <section>
+                <p>Il existe deux sortes de directives :</p>
+                <p>Les directives structurelles : Elles ont pour but de modifier le DOM en ajoutant, enlevant ou
+                    replaçant un élément du DOM.
+                    Les attribute directives : Elles ont pour but de modifier l'apparence ou le comportement d'un
+                    élément.</p>
+
+            </section>
+            <section>
+                <h3>ElementRef</h3>
+                <p>
+                    <ul>
+                        <li>
+                <p appBasicHighlight>App Basic Highlight Example</p></li>
+                <li>
+                    <pre>constructor(private elementRef: ElementRef) {}</pre>
+                </li>
+                <li>
+                    <pre>ngOnInit() { this.elementRef.nativeElement.style.backgroundColor = 'green'; }</pre>
+                </li>
+                </ul>
+                </p>
+            </section>
+            <section>
+                <h3>Renderer</h3>
+                <ul>
+                    <li>
+                        <pre>constructor(private elRef: ElementRef, private renderer: Renderer2) {}</pre>
+                    </li>
+                    <li>
+                        <pre>ngOnInit() { this.renderer.setStyle(this.elRef.nativeElement, 'backgroundColor', 'blue'); }</pre>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>@HostBinding</h3>
+                <ul>
+                    <li>
+                        <pre>@HostBinding('style.backgroundColor') backgroundColor;</pre>
+                    </li>
+                    <li>
+                        <pre>ngOnInit() { this.backgroundColor = 'blue'; }</pre>
+                    </li>
+                </ul>
+                </ul>
+            </section>
+            <section>
+                <h3>@HostListener</h3>
+                <pre>@HostListener('mouseenter') mouseenter(eventData: Event) { this.backgroundColor = this.highlightColor; }</pre>
+            </section>
+            <section>
+                <h3>@Input</h3>
+                <ul>
+                    <li>@Input() highlightColor = 'transparent';</li>
+                    <li>
+                        <xmp style="color: #6cc644;"><p appBetterHighlight [highlightColor]="'blue'">Highlight
+                            Directive</p></xmp>
+                    </li>
+                    <li>ou bien,
+                        <xmp style="color: #6cc644;"><p appBetterHighlight highlightColor="blue">Highlight Directive</p>
+                        </xmp>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Services</h2>
+                <p>
+                    "Components shouldn't fetch or save data directly and they certainly shouldn't knowingly present
+                    fake data. They should focus on presenting data and delegate data access to a service."
+                </p>
+            </section>
+            <section>
+                <h3>@Injectable</h3>
+                <p>@Injectable() lets Angular know that a class can be used with the dependency injector.</p>
+            </section>
+            <section>
+                <h3>Providers</h3>
+            </section>
+            <section>
+                <h3>@Inject</h3>
+                <p>@Inject() is a manual mechanism for letting Angular know that a parameter must be injected.</p>
+            </section>
+        </section>
+
+
+        <section>
+            <section>
+                <h2>ngStore</h2>
+                <p>
+                    RxJS powered state management for Angular applications, inspired by Redux.
+                </p>
+            </section>
+            <section>
+                <h2>Implementations</h2>
+                <ul>
+                    <li>@ngrx/store</li>
+                    <li>ng2-redux</li>
+                    <li>@angular-redux/store...</li>
+                </ul>
+            </section>
+            <section>
+                <h3>npm i -S @ngrx/store</h3>
+            </section>
+            <section>
+                <h3>npm i -S @ngrx/store-devtools</h3>
+                <p>@ngrx/store-devtools instruments your store letting you use a powerful time-travelling debugger.</p>
+            </section>
+            <section>
+                <h3>npm i -S @ngrx/entity</h3>
+                <p>@ngrx/entity provides an API to manipulate and query entity collections.</p>
+            </section>
+            <section>
+                <h3>npm i -S @ngrx/router-store</h3>
+                <p>Keeps the state of @angular/router in your store.</p>
+            </section>
+            <section>
+                <h3>npm i -S @ngrx/effects</h3>
+                <p>Isolates side effects from your UI by expressing side effects as sources of actions.</p>
+            </section>
+            <section>
+                <h3>Actions</h3>
+                <p>Actions describe state changes.</p>
+            </section>
+            <section>
+                <h3>Reducers</h3>
+                <p>Pure functions called reducers take the previous state and the next action to compute the new
+                    state.</p>
+                <p>Reducers specify how the application's state changes in response to actions sent to the store.</p>
+                <p>Remember that actions only describe what happened, but don't describe how the application's state
+                    changes.</p>
+            </section>
+            <section>
+                <h3>NgRx Schematics</h3>
+                <ul>
+                    <li>ng config cli.defaultCollection @ngrx/schematics</li>
+                    <li>npm i -D @ngrx/schematics</li>
+                    <li>ng generate entity --name User --module somewhere/somewhere.module.ts</li>
+                    <li>https://github.com/ngrx/platform/tree/master/docs/</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Dependencies</h3>
+                <p>npm i @ngrx/{store,effects,entity,store-devtools} -S</p>
+            </section>
+        </section>
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme || 'night', // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        parallaxBackgroundImage: 'assets/bg.jpg',
+        parallaxBackgroundSize: '1500px 1000px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {
+                src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            }
+        ]
+    });
+
+</script>
+
+<script src="js/raphael-min.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/sequence-diagram-min.js"></script>
+
+<script>
+    var webHooksDiagram = Diagram.parse(
+        "participant User\n" +
+        "Provider->GitHub: Register OAuth Application (optional)\n" +
+        "GitHub-->Provider: Client ID & Secret\n" +
+        "User->Provider: Request WebHook URI\n" +
+        "Provider-->User:\n" +
+        "User->GitHub: Add WebHook\n" +
+        "GitHub->Provider: Call WebHook\n" +
+        "Provider-->User: Provide Service\n"
+    );
+    webHooksDiagram.drawSVG("webHooksDiagram", {theme: 'hand'});
+
+    var serviceHooksDiagram = Diagram.parse(
+        "participant User\n" +
+        "Provider->GitHub: Develop Service Hook\n" +
+        "User->Provider: Request Access Key (optional)\n" +
+        "Provider-->User:\n" +
+        "User->GitHub: Configure Service Hook\n" +
+        "GitHub->Provider: Call Service Hook\n" +
+        "Provider-->User: Provide Service\n"
+    );
+    serviceHooksDiagram.drawSVG("serviceHooksDiagram", {theme: 'hand'});
+
+    var accountIntegrationDiagram = Diagram.parse(
+        "participant User\n" +
+        "User->Provider: Configure Service\n" +
+        "Provider->GitHub: Request Access\n" +
+        "GitHub->User:\n" +
+        "User-->GitHub:\n" +
+        "GitHub-->Provider: Grant Access\n" +
+        "Provider->GitHub: Configure Service- or WebHook\n" +
+        "GitHub->Provider: Call Hook\n" +
+        "Provider-->User: Provide Service\n"
+    );
+    accountIntegrationDiagram.drawSVG("accountIntegrationDiagram", {theme: 'hand'});
+
+    var serviceChainDiagram = Diagram.parse(
+        "participant User\n" +
+        "participant PAAS Provider\n" +
+        "participant QA Provider\n" +
+        "participant CI Provider\n" +
+        "GitHub->CI Provider: Trigger Build\n" +
+        "CI Provider->QA Provider: Static Analysis\n" +
+        "QA Provider-->User: Send Results\n" +
+        "CI Provider->PAAS Provider: Deploy\n" +
+        "PAAS Provider-->User: Running Instance\n"
+    );
+    serviceChainDiagram.drawSVG("serviceChainDiagram", {theme: 'hand'});
+
+</script>
+
+<div class="hidden-mobile">
+    <div style="display: block; position: absolute; bottom: 14px; left: 50%; margin-left: -230px; z-index: 20;">
+        <a href="https://twitter.com/bkimminich" class="twitter-follow-button" data-show-count="false">Follow
+            @bkimminich</a>
+        <script>!function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + '://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, 'script', 'twitter-wjs');</script>
+        <a href="https://twitter.com/share" class="twitter-share-button"
+           data-url="http://github-service-universe.kimminich.de"
+           data-text="Exploring the @GitHub Service Universe (presented at @JavaLandConf and @Clean_Code_Days 2015)"
+           data-via="bkimminich">Tweet</a>
+        <script>!function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + '://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, 'script', 'twitter-wjs');</script>
+        <iframe src="https://ghbtns.com/github-btn.html?user=bkimminich&type=follow&count=true" frameborder="0"
+                scrolling="0" width="170px" height="20px"></iframe>
+        <iframe src="https://ghbtns.com/github-btn.html?user=bkimminich&repo=github-service-universe&type=star&count=true"
+                frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+    </div>
+</div>
+
+
+</body>
+</html>
