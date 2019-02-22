@@ -53,7 +53,10 @@
                 <small>Présenté par: <a href="http://houdass.com">Youness Houdass</a></small>
             </p>
             <p>
-                <small>Email: Houd.youness@gmail.com</small>
+                <small>Email: <a href="#">Houd.youness@gmail.com</a></small>
+            </p>
+            <p>
+                <a href="https://houdass.github.io/angular-netgroup-slides">https://houdass.github.io/angular-netgroup-slides</a>
             </p>
             <p>
                 <a href="http://angular.io/">http://angular.io/</a>
@@ -104,7 +107,7 @@
                     concepts présents dans AngularJS.
                 </h4>
                 <p>
-                    Cette stratégie a été motivée par 4 principes fondateurs :
+                    Cette stratégie a été motivée par 4 principes fondateurs
                 <ul>
                     <li>Augmenter les performances</li>
                     <li>Améliorer la productivité</li>
@@ -197,6 +200,16 @@
                     </li>
                 </ul>
             </section>
+            <section>
+                <h3>Nouveautés Angular 7</h3>
+                <ul>
+                    <li>Disponible depuis Octobre 2018</li>
+                    <li>Virtual Scroll</li>
+                    <li>Drag & Drop</li>
+                    <li>Support du Typescript 3.1</li>
+                    <li>Progrès d’Ivy</li>
+                </ul>
+            </section>
         </section>
 
         <!-- I- 4. Setup projet -->
@@ -205,10 +218,17 @@
                 <h2>I- 4. Setup projet</h2>
             </section>
             <section>
-                <p>
-                    "The CLI is a geart tool for big and very big Angular projects! It allows to focus on Angular code
-                    instead of workflow tasks."
-                </p>
+                <h6>
+                    git clone https://github.com/houdass/angular-netgroup-demo.git
+                </h6>
+            </section>
+            <section>
+                <h6>
+                    npm i -S bootstrap@3.3.7
+                </h6>
+                <h6>
+                    @import '~bootstrap/dist/css/bootstrap.min.css';
+                </h6>
             </section>
         </section>
 
@@ -216,9 +236,10 @@
         <section>
             <section>
                 <h2>I- 5. Angular CLI</h2>
+                <img src="assets/angular/angular.svg" width="400"
+                     style="background: none; border:none; box-shadow:none;"/>
             </section>
             <section>
-                <img src="assets/angular/6.svg" width="400" style="background: none; border:none; box-shadow:none;"/>
                 <p>
                     "The CLI is a geart tool for big and very big Angular projects! It allows to focus on Angular code
                     instead of workflow tasks."
@@ -226,7 +247,7 @@
                 <p>
                     Google nous propose un outil clé en main pour réaliser les tâches de développement les plus
                     courantes. Ce projet est basé sur le projet Open Source ember CLI, qui a maintenant plus de trois
-                    ans. Grâce à notre Angular Cli, il est possible de :
+                    ans. Grâce à notre Angular Cli, il est possible de:
                 <ul>
                     <li>Créer une application from scratch via un scaffolding</li>
                     <li>Générer des component|directive|pipe|service|class|guard|interface|enum|module</li>
@@ -241,7 +262,7 @@
                 <ul>
                     <li>npm i -g @angular/cli</li>
                     <li>ng new angular-netgroup-demo</li>
-                    <li>ng new angular-netgroup-demo --style=less|scss</li>
+                    <li>ng new angular-netgroup-demo --style=less|scss|less|stylus</li>
                     <li>cd angular-netgroup-demo</li>
                     <li>ng serve</li>
                 </ul>
@@ -249,96 +270,277 @@
             </section>
         </section>
 
-
-
-
+        <!-- I- 6. TypeScript, C'est quoi ? -->
         <section>
-            <h2>4. Ajouter bootstrap au projet</h2>
+            <section>
+                <h2>I- 6. TypeScript, C'est quoi ?</h2>
+                <img src="assets/angular/typescript.jpg" width="500"/>
+            </section>
+            <section>
+                <p>
+                    TypeScript est un langage open source développé par Microsoft. C’est un sur-ensemble typé
+                    de JavaScript qui compile vers du JavaScript standard
+                </p>
+            </section>
+            <section>
+                <p>
+                    TypeScript existe depuis 2012. Le plus important étant le système de type, lui donnant même son nom.
+                </p>
+                <p>
+                    Depuis la version 1.5, sortie en 2015, cette bibliothèque essaie d’être un sur-ensemble d’ES6, et
+                    quelques nouveautés, comme les décorateurs.
+                </p>
+                <p>
+                    Ecrire du TypeScript ressemble à écrire du JavaScript. Par convention les fichiers sources
+                    TypeScript ont l’extension .ts, et seront
+                    compilés en JavaScript standard, en général lors du build, avec le compilateur TypeScript. Le code
+                    généré reste très lisible.
+                </p>
+            </section>
+        </section>
+
+        <!-- II- Notions de base -->
+        <section>
+            <section>
+                <h2>II- Notions de base</h2>
+            </section>
+        </section>
+
+        <!-- II. 1. Comment une application Angular est démarrée? -->
+        <section>
+            <h2>II. 1. Comment une application Angular est démarrée?</h2>
+        </section>
+
+        <!-- II- 2. Un composant, c'est quoi? -->
+        <section>
+            <section>
+                <h2>II- 2. Un composant, c'est quoi?</h2>
+                <img src="assets/angular/spa.png" width="500"/>
+            </section>
+            <section>
+                <p>Un composant Angular est un bout d’interface de votre application.</p>
+            </section>
+            <section>
+                <p>
+                    Un composant peut contenir:
+                <ul>
+                    <li>Un bouton</li>
+                    <li>Une image</li>
+                    <li>Un menu de navigation</li>
+                    <li>Une page entière</li>
+                    <li>...</li>
+                </ul>
+                </p>
+            </section>
+            <section>
+                <p>
+                <p>Un composant Angular est constitué de deux parties:</p>
+                <ul>
+                    <li>La classe: C’est là qu’on trouve les données à afficher et la logique applicative.</li>
+                    <li>Le template: C’est la partie du composant qui sera affichée à l’utilisateur.</li>
+                </ul>
+                <p>Pour faire une analogie avec le pattern MVC (Model-View-Controller), on pourrait dire:</p>
+                <ul>
+                    <li>Classe ≈ Contrôleur</li>
+                    <li>Template ≈ Vue</li>
+                </ul>
+                </p>
+            </section>
+        </section>
+
+        <!-- II- 3. Créer un composant -->
+        <section>
+            <section>
+                <h2>II- 3. Créer un composant</h2>
+                <p>ng generate component user</p>
+                <p>ng generate c user</p>
+            </section>
+        </section>
+
+        <!-- II- 4. Databinding -->
+        <section>
+            <section>
+                <h2>II- 4. Databinding</h2>
+                <img src="assets/angular/hangover.gif" width="400"
+                     style="background: none; border:none; box-shadow:none;"/>
+            </section>
+            <section>
+                <p>
+                <ul>
+                    <li>
+                        <span style="color: #6cc644;">String interpolation</span>
+                        <pre><code>{{ data }}</code></pre>
+                    </li>
+                    <li>
+                        <span style="color: #6cc644;">Property binding</span> [property]="data" ou bind-property="data",
+                        par exemple:
+                        <pre><code><button [disabled]="isDisabled"> ...</button></code></pre>
+                    </li>
+                    <li>
+                        <span style="color: #6cc644;">Event Binding </span> (event)="callback()" ou
+                        on-click="callback()", par exemple:
+                        <pre><code><button (click)="onClick()"></button></code></pre>
+                    </li>
+                    <li>
+                        <span style="color: #6cc644;">Two-way binding </span> (Banana in the box)
+                        <pre><code>[(data)]</code></pre>
+                    </li>
+                </ul>
+                </p>
+            </section>
+        </section>
+
+        <!-- II- 5. String interpolation -->
+        <section>
+            <h2>II- 5. String interpolation</h2>
             <p>
-            <ul>
-                <li>npm i -S bootstrap@3.3.7</li>
-                <li>Ouvrir le fichier .angular-cli.json</li>
-                <li>Au niveau du noeud <strong>styles</strong> ajouter : <span style="color: #6cc644;">../node_modules/bootstrap/dist/css/bootstrap.min.css</span>
-                </li>
-            </ul>
+                On utilise la fameuse notation avec double-accolades (les "moustaches") pour indiquer qu'une
+                expression doit être évaluée, ce type de templating est appelé l’interpolation, il s'utilise
+                surtout pour le print/output des propriétés:
+            </p>
+            <p><code>
+                <pre>Hello {{ name }}</pre>
+            </code></p>
+        </section>
+
+        <!-- II- 6. Property binding -->
+        <section>
+            <section>
+                <h2>II- 6. Property binding</h2>
+                <p>
+                    En Angular, on peut écrire dans toutes les propriétés du DOM via des attributs spéciaux sur les
+                    éléments HTML, entourés de crochets []. Ça fait bizarre au premier abord, mais en fait c’est du
+                    HTML valide. Un nom d’attribut HTML peut commencer par n’importe quoi, à l’exception de quelques
+                    caractères comme un guillemet ", une apostrophe ', un slash /, un égal =, un espace...
+                    L’interpolation {{ name }} est juste du sucre syntaxique pour l’écriture suivante:
+                </p>
+                <p><code>
+                    <pre><span [textContent]=[name]></span></pre>
+                </code>
+                </p>
+                <p>Le property binding s'utilise de la façon suivante:</p>
+                <p><code>
+                    <pre><img [src]="user.imgUrl"></pre>
+                </code>
+                </p>
+                <p>Ou bien,</p>
+                <p>
+                    <code>
+                        <pre><img bind-src="user.imgUrl"></pre>
+                    </code>
+                </p>
+            </section>
+            <section>
+                <h5>Attribute/class/style binding</h5>
+                <p>
+                    Le property binding s'utilise surtout pour changer une certaine propriété.
+                    On peut également l'utiliser pour les cas suivants:
+                </p>
+                <p>Attribute Binding:</p>
+                <p><code>
+                    <pre>&lt;td [attr.colspan]="clspn"&gt;...&lt;/td&gt;</pre>
+                </code>
+                </p>
+                <p>Class Binding:</p>
+                <p><code>
+                    <pre><span [class.active]="isActive">Some text</span></pre>
+                </code>
+                </p>
+                <p>Style Binding:</p>
+                <p>
+                    <code>
+                        <pre><span [style.background-color]="'blue'">Blue text</span></pre>
+                    </code>
+                </p>
+                <p>Ou bien,</p>
+                <p>
+                    <code>
+                        <pre><span [style.backgroundColor]="'blue'">Blue text</span></pre>
+                    </code>
+                </p>
+            </section>
+        </section>
+
+        <!-- II- 7. Event binding -->
+        <section>
+            <section>
+                <h2>II- 7. Event binding</h2>
+                <p>
+                    À partir d'un évènement du DOM, on peut interagir avec un composant, pour réaliser ce Data
+                    Binding,
+                    Angular utilise les évènements, d'où le nom d'Event Binding, avec ce mécanisme, vous pouvez être
+                    averti des évènements utilisateurs tels que le click, le frappe sur le clavier.. etc, on
+                    l'utilise
+                    comme suit:
+                </p>
+                <p><code>
+                    <pre><button (click)="callback()">Click</button></pre>
+                </code>
+                </p>
+                <p>Ou bien,</p>
+                <p><code>
+                    <pre><button on-click="callback()">Click</button></pre>
+                </code>
+                </p>
+                <p>/!\ Astuce: Vous pouvez faire de l'event binding spécique à certaines touches au niveau des
+                    évènements Keyup & Keydown.</p>
+                <p>
+                    <code>
+                        <pre><input (keyup.enter)="callback()"></pre>
+                    </code>
+                </p>
+            </section>
+            <section>
+                <p>Voici quelques exemples supplémentaires pour vous donnez une idée de ce qui est possible:</p>
+
+                <img src="assets/angular/eventbindings.png">
+            </section>
+        </section>
+
+        <!-- II- 8. Two way binding -->
+        <section>
+            <h2>II- 8. Two way binding</h2>
+            <p>
+                Ce mécanisme permet, à partir d'une même notation, de modifier le modèle à partir du DOM et de modifier
+                le DOM à partir du modèle. Voici la syntaxe utilisée dans Angular pour déclarer un tel Data Binding:
+            </p>
+            <p><code>
+                <pre><input name="name" [(ngModel)]="user.name"></pre>
+            </code>
+            </p>
+            <p>Ou bien,</p>
+            <p><code>
+                <pre><input name="name" [ngModel]="user.name" (ngModelChange)="user.name = $event"></pre>
+            </code>
             </p>
         </section>
 
+        <!-- II- 9. Une directive, c'est quoi? -->
         <section>
-            <section>
-                <h2>5. Les selectors (composants)</h2>
-            </section>
-
-            <section>
-                <p>
-                <ul>
-                    <li>
-                        selector: 'app-users'
-                        <xmp style="color: #6cc644;">
-                            <app-users></app-users>
-                        </xmp>
-                    </li>
-                    <li>
-                        selector: '.app-users'
-                        <xmp style="color: #6cc644;">
-                            <div class="app-users"></div>
-                        </xmp>
-                    </li>
-                    <li>
-                        selector: '[app-users]'
-                        <xmp style="color: #6cc644;">
-                            <div app-users></div>
-                        </xmp>
-                    </li>
-                </ul>
-                </p>
-            </section>
-        </section>
-
-        <section>
-            <section>
-                <h2>6. Databinding</h2>
-                <img src="assets/angular/3.gif" width="400" style="background: none; border:none; box-shadow:none;"/>
-            </section>
-            <section>
-                <p>
-                <ul>
-                    <li>
-                        <span style="color: #6cc644;">String interpolation</span> {{ data }}
-                    </li>
-                    <li>
-                        <span style="color: #6cc644;">Property binding</span> [property]="data" or bind-property="data",
-                        par exemple:
-                        <xmp>
-                            <button [disabled]="isDisabled"> ...</button>
-                        </xmp>
-                    </li>
-                    <li>
-                        <span style="color: #6cc644;">Event Binding </span> (event)="callback()" or
-                        on-click="callback()", par exemple:
-                        <xmp>
-                            <button (click)="onClick()"></button>
-                        </xmp>
-                    </li>
-                    <li>
-                        <span style="color: #6cc644;">Two-way binding </span> (Banana in the box) [(data)]
-                    </li>
-                </ul>
-                </p>
-            </section>
+            <h2>II- 9. Une directive, c'est quoi?</h2>
+            <p>
+                Une directive est très semblable à un composant, sauf qu’elle n’a pas de template. En fait, la classe
+                Component hérite de la classe Directive dans le framework.
+            </p>
+            <p>
+                Les directives sont des briques minimalistes. On peut les concevoir comme des décorateurs pour ton
+                HTML : elles attacheront du comportement aux éléments du DOM. Et tu peux avoir plusieurs directives
+                appliquées à un même élément.
+                Une directive doit avoir un sélecteur CSS, qui indique au framework où l’activer dans notre template.
+            </p>
         </section>
 
         <section>
             <h2>*ngIf / else condition</h2>
             <ul>
                 <li>
-                    <xmp style="color: #6cc644;"><p *ngIf="isVisible; else noCondition">This is true</p></xmp>
+                    <pre><code><p *ngIf="isVisible; else noCondition">This is true</p></code></pre>
                 </li>
                 <li>
-                    <xmp style="color: #6cc644;">
+                    <pre><code>
                         <ng-template #noCondition><p>This is false
                             <p></ng-template>
-                    </xmp>
+                    </code></pre>
                 </li>
             </ul>
         </section>
@@ -346,12 +548,12 @@
             <h2>*ngFor / index</h2>
             <ul>
                 <li>
-                    <xmp style="color: #6cc644;"><p *ngFor="let item of items; let i = index">{{i}} - {{item.name}}</p>
-                    </xmp>
+                    <pre><code><p *ngFor="let item of items; let i = index">{{i}} - {{item.name}}</p>
+                    </code></pre>
                 </li>
                 <li>Or,
-                    <xmp style="color: #6cc644;"><p *ngFor="let item of items; index as i">{{i}} - {{item.name}}</p>
-                    </xmp>
+                    <pre><code><p *ngFor="let item of items; index as i">{{i}} - {{item.name}}</p>
+                    </code></pre>
                 </li>
             </ul>
         </section>
@@ -469,10 +671,10 @@
                 </p>
             </section>
             <section>
-                <p>Il existe deux sortes de directives :</p>
-                <p>Les directives structurelles : Elles ont pour but de modifier le DOM en ajoutant, enlevant ou
+                <p>Il existe deux sortes de directives:</p>
+                <p>Les directives structurelles: Elles ont pour but de modifier le DOM en ajoutant, enlevant ou
                     replaçant un élément du DOM.
-                    Les attribute directives : Elles ont pour but de modifier l'apparence ou le comportement d'un
+                    Les attribute directives: Elles ont pour but de modifier l'apparence ou le comportement d'un
                     élément.</p>
 
             </section>
@@ -523,12 +725,12 @@
                 <ul>
                     <li>@Input() highlightColor = 'transparent';</li>
                     <li>
-                        <xmp style="color: #6cc644;"><p appBetterHighlight [highlightColor]="'blue'">Highlight
-                            Directive</p></xmp>
+                        <pre><code><p appBetterHighlight [highlightColor]="'blue'">Highlight
+                            Directive</p></code></pre>
                     </li>
                     <li>ou bien,
-                        <xmp style="color: #6cc644;"><p appBetterHighlight highlightColor="blue">Highlight Directive</p>
-                        </xmp>
+                        <pre><code><p appBetterHighlight highlightColor="blue">Highlight Directive</p>
+                        </code></pre>
                     </li>
                 </ul>
             </section>
