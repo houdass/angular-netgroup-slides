@@ -50,16 +50,13 @@
 
             <h1>Angular</h1>
             <p>
-                <small>Présenté par: <a href="http://houdass.com">Youness Houdass</a></small>
+                <small>Présenté par: <a href="http://houdass.com" target="_blank">Youness Houdass</a></small>
             </p>
             <p>
-                <small>Email: <a href="#">Houd.youness@gmail.com</a></small>
+                <small>Email: <a href="#" target="_blank">Houd.youness@gmail.com</a></small>
             </p>
             <p>
-                <a href="https://houdass.github.io/angular-netgroup-slides">https://houdass.github.io/angular-netgroup-slides</a>
-            </p>
-            <p>
-                <a href="http://angular.io/">http://angular.io/</a>
+                <a href="http://angular.io/" target="_blank">http://angular.io/</a>
             </p>
         </section>
 
@@ -107,7 +104,7 @@
                     concepts présents dans AngularJS.
                 </h4>
                 <p>
-                    Cette stratégie a été motivée par 4 principes fondateurs
+                    Cette stratégie a été motivée par 4 principes fondateurs:
                 <ul>
                     <li>Augmenter les performances</li>
                     <li>Améliorer la productivité</li>
@@ -121,7 +118,7 @@
                 <ul>
                     <li>Des performances améliorées</li>
                     <li>Une modularité accrue / du code plus expressif</li>
-                    <li>Un respect des nouveaux standards du web</li>
+                    <li>Respect des nouveaux standards du web</li>
                 </ul>
             </section>
         </section>
@@ -182,15 +179,14 @@
                     </li>
                     <li>Angular Elements</li>
                     <li>Nouveau moteur de rendu "Ivy":
-                        <small>moteur de rendu qui réduira la taille des applications, accélèrera le temps de
+                        <small>C'est un moteur de rendu qui réduira la taille des applications, accélèrera le temps de
                             compilation et sera plus facile à débugger. C’est en tous cas la promesse de l’équipe
                             Angular, qui assure par ailleurs que la transition vers ce nouveau moteur de rendu se fera
                             tout en douceur
                         </small>
                     </li>
                     <li>Schematics et ng update</li>
-                    <li>Bazel:
-                        <small>un outil de build</small>
+                    <li>Bazel (Outil de build)</i>
                     </li>
                     <li>Service Workers et Progressive Web Apps</li>
                     <li>Tree-shakable providers:
@@ -250,7 +246,8 @@
                     ans. Grâce à notre Angular Cli, il est possible de:
                 <ul>
                     <li>Créer une application from scratch via un scaffolding</li>
-                    <li>Générer des component|directive|pipe|service|class|guard|interface|enum|module</li>
+                    <li>Générer des component | directive | pipe | service | class | guard | interface | enum | module
+                    </li>
                     <li>Builder un projet</li>
                     <li>Lancer des tests de End-to-End (E2E) ou unitaires</li>
                     <li>Et beaucoup d'autres choses…</li>
@@ -287,8 +284,9 @@
                     TypeScript existe depuis 2012. Le plus important étant le système de type, lui donnant même son nom.
                 </p>
                 <p>
-                    Depuis la version 1.5, sortie en 2015, cette bibliothèque essaie d’être un sur-ensemble d’ES6, et
-                    quelques nouveautés, comme les décorateurs.
+                    Depuis la version 1.5, sortie en 2015, cette bibliothèque essaie d’être un sur-ensemble d’ES6,
+                    incluant toutes les fonctionnalités
+                    d'ES6 et quelques nouveautés, comme les décorateurs.
                 </p>
                 <p>
                     Ecrire du TypeScript ressemble à écrire du JavaScript. Par convention les fichiers sources
@@ -353,7 +351,7 @@
             <section>
                 <h2>II- 3. Créer un composant</h2>
                 <p>ng generate component user</p>
-                <p>ng generate c user</p>
+                <p>ng g c user</p>
             </section>
         </section>
 
@@ -369,21 +367,21 @@
                 <ul>
                     <li>
                         <span style="color: #6cc644;">String interpolation</span>
-                        <pre><code>{{ data }}</code></pre>
+                        <pre><code data-trim>{{ data }}</code></pre>
                     </li>
                     <li>
                         <span style="color: #6cc644;">Property binding</span> [property]="data" ou bind-property="data",
                         par exemple:
-                        <pre><code><button [disabled]="isDisabled"> ...</button></code></pre>
+                        <pre><code data-trim><button [disabled]="isDisabled"> ...</button></code></pre>
                     </li>
                     <li>
                         <span style="color: #6cc644;">Event Binding </span> (event)="callback()" ou
                         on-click="callback()", par exemple:
-                        <pre><code><button (click)="onClick()"></button></code></pre>
+                        <pre><code data-trim><button (click)="onClick()"></button></code></pre>
                     </li>
                     <li>
                         <span style="color: #6cc644;">Two-way binding </span> (Banana in the box)
-                        <pre><code>[(data)]</code></pre>
+                        <pre><code data-trim>[(data)]</code></pre>
                     </li>
                 </ul>
                 </p>
@@ -398,7 +396,7 @@
                 expression doit être évaluée, ce type de templating est appelé l’interpolation, il s'utilise
                 surtout pour le print/output des propriétés:
             </p>
-            <p><code>
+            <p><code data-trim>
                 <pre>Hello {{ name }}</pre>
             </code></p>
         </section>
@@ -414,18 +412,18 @@
                     caractères comme un guillemet ", une apostrophe ', un slash /, un égal =, un espace...
                     L’interpolation {{ name }} est juste du sucre syntaxique pour l’écriture suivante:
                 </p>
-                <p><code>
-                    <pre><span [textContent]=[name]></span></pre>
+                <p><code data-trim>
+                    <pre><span [textContent]="name"></span></pre>
                 </code>
                 </p>
                 <p>Le property binding s'utilise de la façon suivante:</p>
-                <p><code>
+                <p><code data-trim>
                     <pre><img [src]="user.imgUrl"></pre>
                 </code>
                 </p>
                 <p>Ou bien,</p>
                 <p>
-                    <code>
+                    <code data-trim>
                         <pre><img bind-src="user.imgUrl"></pre>
                     </code>
                 </p>
@@ -437,24 +435,24 @@
                     On peut également l'utiliser pour les cas suivants:
                 </p>
                 <p>Attribute Binding:</p>
-                <p><code>
+                <p><code data-trim>
                     <pre>&lt;td [attr.colspan]="clspn"&gt;...&lt;/td&gt;</pre>
                 </code>
                 </p>
                 <p>Class Binding:</p>
-                <p><code>
+                <p><code data-trim>
                     <pre><span [class.active]="isActive">Some text</span></pre>
                 </code>
                 </p>
                 <p>Style Binding:</p>
                 <p>
-                    <code>
+                    <code data-trim>
                         <pre><span [style.background-color]="'blue'">Blue text</span></pre>
                     </code>
                 </p>
                 <p>Ou bien,</p>
                 <p>
-                    <code>
+                    <code data-trim>
                         <pre><span [style.backgroundColor]="'blue'">Blue text</span></pre>
                     </code>
                 </p>
@@ -473,19 +471,19 @@
                     l'utilise
                     comme suit:
                 </p>
-                <p><code>
+                <p><code data-trim>
                     <pre><button (click)="callback()">Click</button></pre>
                 </code>
                 </p>
                 <p>Ou bien,</p>
-                <p><code>
+                <p><code data-trim>
                     <pre><button on-click="callback()">Click</button></pre>
                 </code>
                 </p>
                 <p>/!\ Astuce: Vous pouvez faire de l'event binding spécique à certaines touches au niveau des
                     évènements Keyup & Keydown.</p>
                 <p>
-                    <code>
+                    <code data-trim>
                         <pre><input (keyup.enter)="callback()"></pre>
                     </code>
                 </p>
@@ -504,12 +502,12 @@
                 Ce mécanisme permet, à partir d'une même notation, de modifier le modèle à partir du DOM et de modifier
                 le DOM à partir du modèle. Voici la syntaxe utilisée dans Angular pour déclarer un tel Data Binding:
             </p>
-            <p><code>
+            <p><code data-trim>
                 <pre><input name="name" [(ngModel)]="user.name"></pre>
             </code>
             </p>
             <p>Ou bien,</p>
-            <p><code>
+            <p><code data-trim>
                 <pre><input name="name" [ngModel]="user.name" (ngModelChange)="user.name = $event"></pre>
             </code>
             </p>
@@ -535,21 +533,21 @@
             <section><h2>II- 10. *ngIf & *ngFor & ngSwitch</h2></section>
             <section>
                 <h2>*ngIf / else condition</h2>
-                <img src="assets/angular/ngif.png">
+                <img src="assets/angular/ngif.png" width="600">
             </section>
             <section>
                 <h2>*ngFor / index</h2>
                 <p>
-                <pre><code><div *ngFor="let item of items; let i = index">{{i}} - {{item.name}}</div>
+                <pre><code data-trim><div *ngFor="let item of items; let i = index">{{i}} - {{item.name}}</div>
                     </code></pre>
                 Ou,
-                <pre><code><p *ngFor="let item of items; index as i">{{i}} - {{item.name}}</p>
+                <pre><code data-trim><p *ngFor="let item of items; index as i">{{i}} - {{item.name}}</p>
                     </code></pre>
                 </p>
             </section>
             <section>
                 <h2>ngSwitch</h2>
-                <img src="assets/angular/ngswitch.png">
+                <img src="assets/angular/ngswitch.png" width="650">
             </section>
         </section>
 
@@ -558,19 +556,18 @@
             <section><h2>II- 11. ngClass & ngStyle</h2></section>
             <section>
                 <h2>ngClass</h2>
-                <img src="assets/angular/ngclass.png">
+                <img src="assets/angular/ngclass.png" width="600">
             </section>
             <section>
                 <h2>ngStyle</h2>
                 <p>
-                    <code>
+                    <code data-trim>
                         <pre><span [ngStyle]="{'background-color':'green'}"></span></pre>
                     </code>
                 </p>
                 <p>
-                    <code><pre><span [ngStyle]="{'background-color':person.country === 'UK' ? 'green' : 'red' }"></span>
-                    </pre>
-                    </code>
+                    <pre><code data-trim>
+                <p [ngStyle]="{'background-color':person.country === 'UK' ? 'green' : 'red' }"></p></code></pre>
                 </p>
             </section>
         </section>
@@ -579,7 +576,7 @@
         <section>
             <section>
                 <h2>II- 12. Debugging</h2>
-                <p><a href="https://augury.rangle.io/">https://augury.rangle.io/</a></p>
+                <p><a href="https://augury.rangle.io/" target="_blank">https://augury.rangle.io/</a></p>
             </section>
         </section>
 
@@ -627,9 +624,9 @@
             </section>
         </section>
 
-        <!-- III- 6. @Encapsulation -->
+        <!-- III- 6. Encapsulation -->
         <section>
-            <h2>III- 6. @Encapsulation</h2>
+            <h2>III- 6. Encapsulation</h2>
             <ul>
                 <li>
                     <span style="color: #6cc644;">encapsulation: ViewEncapsulation.Emulated</span> Pas de shadow DOM,
@@ -764,9 +761,9 @@
             </ul>
         </section>
 
-        <!-- IV- 2. Les directives directives -->
+        <!-- IV- 2. Les attribute directives -->
         <section>
-            <h3>IV- 2. Les directives directives</h3>
+            <h3>IV- 2. Les attribute directives</h3>
             <ul>
                 <li>NgClass</li>
                 <li>NgStyle</li>
@@ -777,12 +774,12 @@
         <section>
             <h3>IV- 3. ElementRef</h3>
             <p>
-                <code>
+                <code data-trim>
                     <pre>constructor(private elementRef: ElementRef) {}</pre>
                 </code>
             </p>
             <p>
-                <code>
+                <code data-trim>
                     <pre>ngOnInit() { this.elementRef.nativeElement.style.backgroundColor = 'green'; }</pre>
                 </code>
             </p>
@@ -792,12 +789,12 @@
         <section>
             <h3>IV- 4. Renderer</h3>
             <p>
-                <code>
+                <code data-trim>
                     <pre>constructor(private elRef: ElementRef, private renderer: Renderer2) {}</pre>
                 </code>
             </p>
             <p>
-                <code>
+                <code data-trim>
                     <pre>ngOnInit() { this.renderer.setStyle(this.elRef.nativeElement, 'backgroundColor', 'blue'); }</pre>
                 </code>
             </p>
@@ -806,12 +803,12 @@
         <!-- IV- 5. @HostBinding -->
         <section>
             <h3>IV- 5. @HostBinding</h3>
-            <p><code>
+            <p><code data-trim>
                 <pre>@HostBinding('style.backgroundColor') backgroundColor;</pre>
             </code>
             </p>
             <p>
-                <code>
+                <code data-trim>
                     <pre>ngOnInit() { this.backgroundColor = 'blue'; }</pre>
                 </code>
             </p>
@@ -820,7 +817,7 @@
         <!-- IV- 6. @HostListener -->
         <section>
             <h3>IV- 6. @HostListener</h3>
-            <p><code>
+            <p><code data-trim>
                 <pre>@HostListener('mouseenter') mouseenter(eventData: Event) { this.backgroundColor = this.highlightColor; }</pre>
             </code></p>
         </section>
@@ -829,30 +826,27 @@
         <section>
             <h3>IV- 7. @Input</h3>
             <div>
-                <pre><code>@Input() highlightColor = 'transparent';</code></pre>
+                <pre><code data-trim>@Input() highlightColor = 'transparent';</code></pre>
             </div>
-            <div>Côté HTML: <pre><code>
+            <div>Côté HTML:
+                <pre><code data-trim>
             <p appBetterHighlight [highlightColor]="'blue'">Highlight
-                Directive</p></code></pre></div>
+                Directive</p></code></pre>
+            </div>
             <div>ou bien,
-                <pre><code><p appBetterHighlight highlightColor="blue">Highlight Directive</p>
-                        </code></pre></div>
+                <pre><code data-trim><p appBetterHighlight highlightColor="blue">Highlight Directive</p>
+                        </code></pre>
+            </div>
         </section>
 
         <!-- V- Services & Injection des dépendances -->
         <section>
-            <section>
-                <h2>V- Services & Injection des dépendances</h2>
-                <p>
-                    "Components shouldn't fetch or save data directly and they certainly shouldn't knowingly present
-                    fake data. They should focus on presenting data and delegate data access to a service."
-                </p>
-            </section>
+            <h3>V- Services & Injection des dépendances</h3>
         </section>
 
         <!-- V- 1. @Injectable -->
         <section>
-            <h3>V- 1. @Injectable </h3>
+            <h3>V- 1. @Injectable</h3>
             <p>@Injectable() lets Angular know that a class can be used with the dependency injector.</p>
         </section>
 
@@ -865,73 +859,523 @@
         <section>
             <h3>V- 3. @Inject</h3>
             <p>@Inject() is a manual mechanism for letting Angular know that a parameter must be injected.</p>
+            <a href="https://angular-2-training-book.rangle.io/handout/di/angular2/inject_and_injectable.html" target="_blank">Cliquez
+                ici
+                pour plus d'informations</a>
         </section>
 
         <!-- V- 4. providedIn -->
         <section>
             <h3>V- 4. providedIn</h3>
+            <a href="https://guide-angular.wishtack.io/angular/dependency-injection/tree-shakable-services" target="_blank">Cliquez ici
+                pour plus d'informations</a>
         </section>
 
+        <!-- V- 5. InjectionToken -->
+        <section>
+            <h3>V- 5. InjectionToken</h3>
+            <a href="https://guide-angular.wishtack.io/angular/dependency-injection/class-vs-injection-token" target="_blank">Cliquez
+                ici
+                pour plus d'informations (lien1)</a>
+            <br>
+            <a href="https://offering.solutions/blog/articles/2018/08/17/using-useclass-usefactory-usevalue-useexisting-with-treeshakable-providers-in-angular/#useexisting" target="_blank">Cliquez
+                ici
+                pour plus d'informations (lien 2)</a>
+        </section>
+
+        <!-- VI- Routing -->
         <section>
             <section>
-                <h2>ngStore</h2>
+                <h2>VI- Routing</h2>
                 <p>
-                    RxJS powered state management for Angular applications, inspired by Redux.
+                    L'un des énormes avantages d'utiliser Angular est de pouvoir créer des "single page application"
+                    (SPA). Sur le Web, ces applications sont rapides et lisses : il n'y a qu'un seul chargement de page
+                    au début, et même si les données mettent parfois du temps à arriver, la sensation pour l'utilisateur
+                    est celle d'une application native. Au lieu de charger une nouvelle page à chaque clic ou à chaque
+                    changement d'URL, on remplace le contenu ou une partie du contenu de la page : on modifie les
+                    components qui y sont affichés, ou le contenu de ces components. On accomplit tout cela avec le
+                    "routing", où l'application lit le contenu de l'URL pour afficher le ou les components requis.
                 </p>
             </section>
+        </section>
+
+        <!-- VI- 1- Setup des routes -->
+        <section>
             <section>
-                <h2>Implementations</h2>
-                <ul>
-                    <li>@ngrx/store</li>
-                    <li>ng2-redux</li>
-                    <li>@angular-redux/store...</li>
-                </ul>
+                <h2>VI- 1- Setup des routes</h2>
+                <a href="https://guide-angular.wishtack.io/angular/routing/mise-en-place-du-routing" target="_blank">Cliquez ici
+                    pour plus d'informations</a>
+            </section>
+        </section>
+
+        <!-- VI- 2- <router-outlet> -->
+        <section>
+            <section>
+                <h2>VI- 2- &lt;router-outlet&gt;</h2>
+                <p>Pour indiquer l'emplacement d'insertion du composant, il faut utiliser la directive &lt;router-outlet&gt;</p>
+            </section>
+        </section>
+
+        <!-- VI- 3- RouterLink, RouterLinkActive & RouterLinkActiveOptions -->
+        <section>
+            <section>
+                <h2>VI- 3- RouterLink, RouterLinkActive & RouterLinkActiveOptions</h2>
+            </section>
+        </section>
+
+        <!-- VI- 4- Comprendre les chemins de navigation -->
+        <section>
+            <section>
+                <h2>VI- 4- Comprendre les chemins de navigation</h2>
+            </section>
+        </section>
+
+        <!-- VI- 5- Naviguer via le code (Typescript) -->
+        <section>
+            <section>
+                <h2>VI- 5- Naviguer via le code (Typescript)</h2>
+            </section>
+        </section>
+
+        <!-- VI- 6- relativeTo -->
+        <section>
+            <section>
+                <h2>VI- 6- relativeTo</h2>
+            </section>
+        </section>
+
+        <!-- VI- 7- Passer & récupérer des paramètres, des queryParams & des fragments -->
+        <section>
+            <section>
+                <h2>VI- 7- Passer & récupérer des paramètres, des queryParams & des fragments</h2>
+            </section>
+        </section>
+
+        <!-- VI- 8- Children (Nested Routes) -->
+        <section>
+            <section>
+                <h2>VI- 8- Children (Nested Routes)</h2>
+            </section>
+        </section>
+
+        <!-- VI- 9- QueryParamsHandling -->
+        <section>
+            <section>
+                <h2>VI- 9- QueryParamsHandling</h2>
+            </section>
+        </section>
+
+        <!-- VI- 10- La redirection / Wildcard (**) -->
+        <section>
+            <section>
+                <h2>VI- 10- La redirection / Wildcard (**)</h2>
+            </section>
+        </section>
+
+        <!-- VI- 11- canActivate, canActivateChild & canDeactivate -->
+        <section>
+            <section>
+                <h2>VI- 11- canActivate, canActivateChild & canDeactivate</h2>
+            </section>
+        </section>
+
+        <!-- VI- 12- Données statiques (data) & Données dynamiques (resolve) -->
+        <section>
+            <section>
+                <h2>VI- 12- Données statiques (data) & Données dynamiques (resolve)</h2>
+            </section>
+        </section>
+
+        <!-- VII- RxJS -->
+        <section>
+            <section>
+                <h2>VII- RxJS</h2>
+            </section>
+        </section>
+
+        <!-- VII- 1- RxJS, c'est quoi? -->
+        <section>
+            <section>
+                <h2>VII- 1- RxJS, c'est quoi?</h2>
+                <p>RxJS est l'implémentation JavaScript de ReactiveX, extensions-réactives en français, un projet visant
+                    à implémenter sous la forme de bibliothèque les outils nécessaire pour utiliser le paradigme réactif
+                    dans de multiples languages. Aussi appelé le Lodash des données asynchrones, il implémente la notion
+                    d'observables-observer et fournit tout un panel d'opérateurs pour travailler avec les données qui y
+                    passent.</p>
+            </section>
+        </section>
+
+        <!-- VII- 2- Observable/Observer -->
+        <section>
+            <section>
+                <h2>VII- 2- Observable/Observer</h2>
+                <p>Un Observable est un objet implémentant une méthode .subscribe qui prend comme paramètre un
+                    Observer.
+                    Ce dernier a cette forme:
+                </p>
+                <pre><code data-trim>
+const observer = {
+  next: val => console.log(val), // une fonction à exécuter à chaque nouvel évenement
+  error: err => console.error(err), // une fonction à exécuter en cas d'erreur
+  complete: () => console.info("Complete!"), // une fonction à exécuter lorsque l'observable a fini
+};
+                </code></pre>
+            </section>
+        </section>
+
+        <!-- VII- 3- Observable.create -->
+        <section>
+            <section>
+                <h2>VII- 3- Observable.create</h2>
+            </section>
+        </section>
+
+        <!-- VII- 4- Unsubscribe -->
+        <section>
+            <section>
+                <h2>VII- 4- Unsubscribe</h2>
+            </section>
+        </section>
+
+        <!-- VII- 5- Les Opérateurs -->
+        <section>
+            <section>
+                <h2>VII- 5- Les Opérateurs</h2>
+            </section>
+        </section>
+
+        <!-- VII- 6- Promise vs. Observable -->
+        <section>
+            <section>
+                <h2>VII- 6- Promise vs. Observable</h2>
+            </section>
+        </section>
+
+        <!-- VII- 7- Subject/BehaviorSubject -->
+        <section>
+            <section>
+                <h2>VII- 7- Subject/BehaviorSubject</h2>
+            </section>
+        </section>
+
+        <!-- VIII- Pipes -->
+        <section>
+            <section>
+                <h2>VIII- Pipes</h2>
+            </section>
+        </section>
+
+        <!-- VIII- 1- Les pipes, c'est quoi? -->
+        <section>
+            <section>
+                <h2>VIII- 1- Les pipes, c'est quoi?</h2>
+            </section>
+        </section>
+
+        <!-- VIII- 2- Passer des paramètres au pipe -->
+        <section>
+            <section>
+                <h2>VIII- 2- Passer des paramètres au pipe</h2>
+            </section>
+        </section>
+
+        <!-- VIII- 3- Créer un pipe personnalisé -->
+        <section>
+            <section>
+                <h2>VIII- 3- Créer un pipe personnalisé</h2>
+            </section>
+        </section>
+
+        <!-- VIII- 4- Pure/Impure -->
+        <section>
+            <section>
+                <h2>VIII- 4- Pure/Impure</h2>
+            </section>
+        </section>
+
+        <!-- IX- Forms -->
+        <section>
+            <section>
+                <h2>IX- Forms</h2>
+            </section>
+        </section>
+
+        <!-- IX- 1- Template-Driven Form (TD) vs. Reactive Form -->
+        <section>
+            <section>
+                <h2>IX- 1- Template-Driven Form (TD) vs. Reactive Form</h2>
+                <img src="assets/angular/tdvsreactive.png">
+            </section>
+        </section>
+
+        <!-- IX- 2- Template-Driven Form -->
+        <section>
+            <section>
+                <h2>IX- 2- Template-Driven Form</h2>
+            </section>
+
+            <!-- IX- 2- a- Mettre en place le Template-Driven Form -->
+            <section>
+                <h2>IX- 2- a- Mettre en place le Template-Driven Form</h2>
+            </section>
+
+            <!-- IX- 2- b- Le form state -->
+            <section>
+                <h2>IX- 2- b- Le form state</h2>
+                <img src="assets/angular/controlstate.jpg">
+            </section>
+
+            <!-- IX- 2- c- La validation -->
+            <section>
+                <h2>IX- 2- c- La validation</h2>
+            </section>
+
+            <!-- IX- 2- d- Afficher les messages d'erreur -->
+            <section>
+                <h2>IX- 2- d- Afficher les messages d'erreur</h2>
+            </section>
+
+            <!-- IX- 2- e- Setter des valeurs par défaut via ngModel -->
+            <section>
+                <h2>IX- 2- e- Setter des valeurs par défaut via ngModel</h2>
+            </section>
+
+            <!-- IX- 2- f- ngGroupModel -->
+            <section>
+                <h2>IX- 2- f- ngGroupModel</h2>
+            </section>
+
+            <!-- IX- 2- g- setValue/patchValue -->
+            <section>
+                <h2>IX- 2- g- setValue/patchValue</h2>
+            </section>
+
+            <!-- IX- 2- h- Reset & Utiliser le formulaire -->
+            <section>
+                <h2>IX- 2- h- Reset & Utiliser le formulaire</h2>
+            </section>
+        </section>
+
+        <!-- IX- 3- Reactive Form -->
+        <section>
+            <section>
+                <h2>IX- 3- Reactive Form</h2>
+            </section>
+
+            <!-- IX- 3- a- Mettre en place le Form reactive -->
+            <section>
+                <h2>IX- 3- a- Mettre en place le Form reactive</h2>
+            </section>
+
+            <!-- IX- 3- b- Synchroniser l'HTML avec le Form -->
+            <section>
+                <h2>IX- 3- b- Synchroniser l'HTML avec le Form</h2>
+            </section>
+
+            <!-- IX- 3- c- Validation -->
+            <section>
+                <h2>IX- 3- c- Validation</h2>
+            </section>
+
+            <!-- IX- d- Accéder aux Controls -->
+            <section>
+                <h2>IX- d- Accéder aux Controls</h2>
+            </section>
+
+            <!-- IX- e- Reactive Grouping Controls -->
+            <section>
+                <h2>IX- e- Reactive Grouping Controls</h2>
+            </section>
+
+            <!-- IX- f- Custom Async validator -->
+            <section>
+                <h2>IX- f- Custom Async validators</h2>
+            </section>
+        </section>
+
+        <!-- X- Http & Firebase -->
+        <section>
+            <section>
+                <h2>X- Http & Firebase</h2>
+                <a href="https://www.positronx.io/angular-7-httpclient-http-service/" target="_blank">Cliquez
+                    ici
+                    pour plus d'informations</a>
+            </section>
+        </section>
+
+        <!-- X- 1- HttpClient & Http verbs -->
+        <section>
+            <section>
+                <h2>X- 1- HttpClient & Http verbs </h2>
+            </section>
+        </section>
+
+        <!-- X- 2- Interceptors -->
+        <section>
+            <section>
+                <h2>X- 2- Interceptors </h2>
+            </section>
+        </section>
+
+        <!-- XI- Modules -->
+        <section>
+            <section>
+                <h2>XI- Modules</h2>
+            </section>
+        </section>
+
+        <!-- X- 1- Introduction -->
+        <section>
+            <section>
+                <h2>X- 1- Introduction</h2>
+            </section>
+        </section>
+
+        <!-- XI- 2- Lazyload modules -->
+        <section>
+            <section>
+                <h2>XI- 2- Lazyload modules</h2>
+            </section>
+        </section>
+
+        <!-- XI- 3- Preloading Lazy Loaded Routes -->
+        <section>
+            <section>
+                <h2>XI- 3- Preloading Lazy Loaded Routes</h2>
+            </section>
+        </section>
+
+        <!-- XI- 4- JIT vs. AOT -->
+        <section>
+            <section>
+                <h2>XI- 4- JIT vs. AOT</h2>
+                <a href="https://blogs.infinitesquare.com/posts/web/angular-jit-vs-aot" target="_blank">Cliquez
+                    ici
+                    pour plus d'informations</a>
+            </section>
+        </section>
+
+        <!-- XII- Déploiement -->
+        <section>
+            <section>
+                <h2>XII- Déploiement</h2>
+            </section>
+        </section>
+
+        <!-- XII- 1- Introduction -->
+        <section>
+            <section>
+                <h2>XII- 1- Introduction</h2>
+            </section>
+        </section>
+
+        <!-- XII- 2- Déployer une application Angular -->
+        <section>
+            <section>
+                <h2>XII- 2- Déployer une application Angular</h2>
+                <a href="https://medium.com/code-sketch/how-to-deploy-an-angular-7-app-to-github-pages-9427b609645f" target="_blank">Cliquez
+                    ici
+                    pour plus d'informations</a>
+            </section>
+        </section>
+
+        <!-- XIII- Les tests unitaires -->
+        <section>
+            <section>
+                <h2>XIII- Les tests unitaires</h2>
+            </section>
+        </section>
+
+        <!-- XIII- 1- Introduction -->
+        <section>
+            <section>
+                <h2>XIII- 1- Introduction</h2>
+            </section>
+        </section>
+
+        <!-- XIII- 2- TP -->
+        <section>
+            <section>
+                <h2>XIII- 2- TP</h2>
+                <a href="https://github.com/houdass/ng-test" target="_blank">Cliquez
+                    ici
+                    pour plus d'informations</a>
+            </section>
+        </section>
+
+        <!-- <section>
+             <section>
+                 <h2>ngStore</h2>
+                 <p>
+                     RxJS powered state management for Angular applications, inspired by Redux.
+                 </p>
+             </section>
+             <section>
+                 <h2>Implementations</h2>
+                 <ul>
+                     <li>@ngrx/store</li>
+                     <li>ng2-redux</li>
+                     <li>@angular-redux/store...</li>
+                 </ul>
+             </section>
+             <section>
+                 <h3>npm i -S @ngrx/store</h3>
+             </section>
+             <section>
+                 <h3>npm i -S @ngrx/store-devtools</h3>
+                 <p>@ngrx/store-devtools instruments your store letting you use a powerful time-travelling
+                     debugger.</p>
+             </section>
+             <section>
+                 <h3>npm i -S @ngrx/entity</h3>
+                 <p>@ngrx/entity provides an API to manipulate and query entity collections.</p>
+             </section>
+             <section>
+                 <h3>npm i -S @ngrx/router-store</h3>
+                 <p>Keeps the state of @angular/router in your store.</p>
+             </section>
+             <section>
+                 <h3>npm i -S @ngrx/effects</h3>
+                 <p>Isolates side effects from your UI by expressing side effects as sources of actions.</p>
+             </section>
+             <section>
+                 <h3>Actions</h3>
+                 <p>Actions describe state changes.</p>
+             </section>
+             <section>
+                 <h3>Reducers</h3>
+                 <p>Pure functions called reducers take the previous state and the next action to compute the new
+                     state.</p>
+                 <p>Reducers specify how the application's state changes in response to actions sent to the
+                     store.</p>
+                 <p>Remember that actions only describe what happened, but don't describe how the application's state
+                     changes.</p>
+             </section>
+             <section>
+                 <h3>NgRx Schematics</h3>
+                 <ul>
+                     <li>ng config cli.defaultCollection @ngrx/schematics</li>
+                     <li>npm i -D @ngrx/schematics</li>
+                     <li>ng generate entity &#45;&#45;name User &#45;&#45;module somewhere/somewhere.module.ts</li>
+                     <li>https://github.com/ngrx/platform/tree/master/docs/</li>
+                 </ul>
+             </section>
+             <section>
+                 <h3>Dependencies</h3>
+                 <p>npm i @ngrx/{store,effects,entity,store-devtools} -S</p>
+             </section>
+         </section>-->
+
+        <!-- END --->
+        <section>
+            <section>
+                <h1>Merci de votre attention!</h1>
+                <h3><span style="background: rgba(103, 103, 103, 1)">&nbsp;Youness&nbsp;</span><span
+                        style="background: rgba(244, 129, 66, 1)">&nbsp;Houdass&nbsp;</span> / houdass.com</h3>
             </section>
             <section>
-                <h3>npm i -S @ngrx/store</h3>
-            </section>
-            <section>
-                <h3>npm i -S @ngrx/store-devtools</h3>
-                <p>@ngrx/store-devtools instruments your store letting you use a powerful time-travelling
-                    debugger.</p>
-            </section>
-            <section>
-                <h3>npm i -S @ngrx/entity</h3>
-                <p>@ngrx/entity provides an API to manipulate and query entity collections.</p>
-            </section>
-            <section>
-                <h3>npm i -S @ngrx/router-store</h3>
-                <p>Keeps the state of @angular/router in your store.</p>
-            </section>
-            <section>
-                <h3>npm i -S @ngrx/effects</h3>
-                <p>Isolates side effects from your UI by expressing side effects as sources of actions.</p>
-            </section>
-            <section>
-                <h3>Actions</h3>
-                <p>Actions describe state changes.</p>
-            </section>
-            <section>
-                <h3>Reducers</h3>
-                <p>Pure functions called reducers take the previous state and the next action to compute the new
-                    state.</p>
-                <p>Reducers specify how the application's state changes in response to actions sent to the
-                    store.</p>
-                <p>Remember that actions only describe what happened, but don't describe how the application's state
-                    changes.</p>
-            </section>
-            <section>
-                <h3>NgRx Schematics</h3>
-                <ul>
-                    <li>ng config cli.defaultCollection @ngrx/schematics</li>
-                    <li>npm i -D @ngrx/schematics</li>
-                    <li>ng generate entity --name User --module somewhere/somewhere.module.ts</li>
-                    <li>https://github.com/ngrx/platform/tree/master/docs/</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Dependencies</h3>
-                <p>npm i @ngrx/{store,effects,entity,store-devtools} -S</p>
+                <h1>Q&amp;A</h1>
+                <img src="assets/angular/6.gif" width="400" style="background: none; border:none; box-shadow:none;"/>
             </section>
         </section>
     </div>
@@ -1050,40 +1494,5 @@
     serviceChainDiagram.drawSVG("serviceChainDiagram", {theme: 'hand'});
 
 </script>
-
-<div class="hidden-mobile">
-    <div style="display: block; position: absolute; bottom: 14px; left: 50%; margin-left: -230px; z-index: 20;">
-        <a href="https://twitter.com/bkimminich" class="twitter-follow-button" data-show-count="false">Follow
-            @bkimminich</a>
-        <script>!function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-            if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = p + '://platform.twitter.com/widgets.js';
-                fjs.parentNode.insertBefore(js, fjs);
-            }
-        }(document, 'script', 'twitter-wjs');</script>
-        <a href="https://twitter.com/share" class="twitter-share-button"
-           data-url="http://github-service-universe.kimminich.de"
-           data-text="Exploring the @GitHub Service Universe (presented at @JavaLandConf and @Clean_Code_Days 2015)"
-           data-via="bkimminich">Tweet</a>
-        <script>!function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-            if (!d.getElementById(id)) {
-                js = d.createElement(s);
-                js.id = id;
-                js.src = p + '://platform.twitter.com/widgets.js';
-                fjs.parentNode.insertBefore(js, fjs);
-            }
-        }(document, 'script', 'twitter-wjs');</script>
-        <iframe src="https://ghbtns.com/github-btn.html?user=bkimminich&type=follow&count=true" frameborder="0"
-                scrolling="0" width="170px" height="20px"></iframe>
-        <iframe src="https://ghbtns.com/github-btn.html?user=bkimminich&repo=github-service-universe&type=star&count=true"
-                frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
-    </div>
-</div>
-
-
 </body>
 </html>
